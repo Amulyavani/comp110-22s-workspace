@@ -41,3 +41,9 @@ if counter == 1:
     print("1 instance of " + character + " found in " + word)
 if counter == 2:
     print("2 instances of " + character + " found in " + word)
+if counter == 3:
+    print("3 instances of " + character + " found in " + word)
+if counter == 4:
+    print("4 instances of " + character + " found in " + word)
+if counter == 5:
+    print("5 instances of " + character + " found in " + word)
