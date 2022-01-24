@@ -1,19 +1,19 @@
 """EX01 - Chardle - A cute step toward Wordle."""
 
-__author__ = 730407531
+__author__ = "730407531"
 
 word: str = input("Enter a 5-character word: ")
-if len(word) <5:
+if len(word) < 5:
     print("Error: Word must contain 5 characters")
     exit()
-if len(word) >5:
+if len(word) > 5:
     print("Error: Word must contain 5 characters")
     exit()
 character: str = input("Enter a single character: ")
-if len(character) >1:
+if len(character) > 1:
     print("Error: Character must be a single character.")
     exit()
-if len(character) <1:
+if len(character) < 1:
     print("Error: Character must be a single character.")
     exit()
 counter: int = 0
@@ -41,4 +41,3 @@ if counter == 1:
     print("1 instance of " + character + " found in " + word)
 if counter == 2:
     print("2 instances of " + character + " found in " + word)
-
