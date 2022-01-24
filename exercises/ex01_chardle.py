@@ -22,18 +22,22 @@ print("Searching for " + character + " in " + word)
 if word[0] == character:
     print(character + " is found at index 0")
     counter = counter + 1
-if word[1] == character:
-    print(character + " is found at index 1")
-    counter = counter + 1
-if word[2] == character:
-    print(character + " is found at index 2")
-    counter = counter + 1
-if word[3] == character:
-    print(character + " is found at index 3")
-    counter = counter + 1
-if word[4] == character:
-    print(character + " is found at index 4")
-    counter = counter + 1
+else:
+        if word[1] == character:
+            print(character + " is found at index 1")
+            counter = counter + 1
+        else:
+            if word[2] == character:
+                print(character + " is found at index 2")
+                counter = counter + 1
+            else:
+                if word[3] == character:
+                    print(character + " is found at index 3")
+                    counter = counter + 1
+                else:
+                    if word[4] == character:
+                        print(character + " is found at index 4")
+                        counter = counter + 1
 
 if counter == 0:
     print("No instances of " + character + " found in " + word)
