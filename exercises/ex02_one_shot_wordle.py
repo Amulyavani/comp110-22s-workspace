@@ -10,6 +10,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 emoji_result: str = ""
 wrong_spot: bool = False
 alt_index: int = 0
+
 while counter < len(guess):
     if guess[counter] == secret_word[counter]:
         emoji_result = emoji_result + GREEN_BOX
