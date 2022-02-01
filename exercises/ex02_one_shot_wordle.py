@@ -1,16 +1,16 @@
-"""One Shot Wordle"""
+"""EX02 - One Shot Wordle."""
 
 __author__ = "730407531"
 
-secret_word: str = f"python"
-guess: str = input(f"What is your 6-letter guess? ")
+secret_word: str = "python"
+guess: str = input("What is your 6-letter guess? ")
 counter: int = 0
-WHITE_BOX: str = "\U00002B1C"
-GREEN_BOX: str = "\U0001F7E9"
-YELLOW_BOX: str = "\U0001F7E8"
 emoji_result: str = ""
 wrong_spot: bool = False
 alt_index: int = 0
+WHITE_BOX: str = "\U00002B1C"
+GREEN_BOX: str = "\U0001F7E9"
+YELLOW_BOX: str = "\U0001F7E8"
 
 while counter < len(guess):
     if guess[counter] == secret_word[counter]:
