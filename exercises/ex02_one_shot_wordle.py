@@ -1,3 +1,5 @@
+"""One Shot Wordle"""
+
 __author__ = "730407531"
 
 secret_word: str = f"python"
