@@ -1,7 +1,6 @@
 
 __author__ = "730407531"
 
-
 secret_word: str = f"python"
 guess: str = input(f"What is your 6-letter guess? ")
 counter: int = 0
