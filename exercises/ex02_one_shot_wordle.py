@@ -31,14 +31,15 @@ while counter < len(guess):
     counter = counter + 1
 print(emoji_result)
 
-while guess:
+while len(guess) != 6:
     if len(guess) < 6:
         guess = input("That was not 6 letters! Try again: ")
     if len(guess) > 6:
         guess = input("That was not 6 letters! Try again: ")
-    if len(guess) == 6:
-        if guess == secret_word:
-            print("Woo! You got it!")
-        else:
-            print("Not quite. Play again soon!")
-    exit()
+
+if len(guess) == 6:
+    if guess == secret_word:
+        print("Woo! You got it!")
+    else:
+        print("Not quite. Play again soon!")
+    
