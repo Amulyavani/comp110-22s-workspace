@@ -5,6 +5,7 @@ __author__ = "730407531"
 secret_word: str = "python"
 guess: str = input("What is your 6-letter guess? ")
 counter: int = 0
+counter < 6
 emoji_result: str = ""
 wrong_spot: bool = False
 alt_index: int = 0
