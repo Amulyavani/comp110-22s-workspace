@@ -42,7 +42,7 @@ def emojified(guess: str, secret: str) -> str:
                 emoji_result = emoji_result + WHITE_BOX
         counter = 0
         i = i + 1
-    return emoji_result 
+    return emoji_result
 
 def input_guess(exp_len: int) -> str:
     """Given an integer "expected length" of a guess, will prompt user for a guess until they guess a word of the appropriate length."""
@@ -54,13 +54,15 @@ def input_guess(exp_len: int) -> str:
             wordle_guess = input(f"That wasn't {exp_len} chars! Try again: ")
     if len(wordle_guess) == exp_len:
         return wordle_guess
+    return wordle_guess
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
     turns: int = 1
     secret_word: str = "codes"
     win_game: bool = False
-    while turns <= 6 and win_game == False:
+
+    while turns < 7 and win_game is False:
         print(f"=== Turn {str(turns)}/6 ===")
         guess = input_guess(len(secret_word))
         emoji_result = emojified(guess, secret_word)
@@ -70,9 +72,8 @@ def main() -> None:
             win_game = True
         else:
             turns = turns + 1
-    if win_game == False:
+    if win_game is False:
         print("X/6 - Sorry, try again tomorrow! ")
-
 if __name__ == "__main__":
     main()
 
