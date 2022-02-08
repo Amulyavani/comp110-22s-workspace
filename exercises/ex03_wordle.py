@@ -2,6 +2,7 @@
 
 __author__ = "730407531"
 
+from turtle import Turtle
 from xmlrpc.client import boolean
 
 def contains_char(word: str, char: str) -> bool:
@@ -23,7 +24,7 @@ def emojified(guess: str, secret: str) -> str:
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
-    wrong_spot: bool = False
+    wrong_spot = False
     while i < len(guess):
         if guess[i] == secret[i]:
             emoji_result = emoji_result + GREEN_BOX
@@ -32,7 +33,7 @@ def emojified(guess: str, secret: str) -> str:
             while counter < len(secret):
                 if secret[counter] == guess[i]:
                     emoji_result = emoji_result + YELLOW_BOX
-                    counter = 6
+                    counter = len(secret)
                     wrong_spot = True
                 else:
                     counter = counter + 1
@@ -53,3 +54,29 @@ def input_guess(exp_len: int) -> str:
             wordle_guess = input(f"That wasn't {exp_len} chars! Try again: ")
     if len(wordle_guess) == exp_len:
         return wordle_guess
+
+def main() -> None:
+    """The entrypoint of the program and main game loop."""
+    turns: int = 1
+    secret_word: str = "codes"
+    win_game: bool = False
+    while turns <= 6 and win_game == False:
+        print(f"=== Turn {str(turns)}/6 ===")
+        guess = input_guess(len(secret_word))
+        emoji_result = emojified(guess, secret_word)
+        print(emoji_result)
+        if guess == secret_word:
+            print(f"You won in {turns}/6 turns! ")
+            win_game = True
+        else:
+            turns = turns + 1
+    if win_game == False:
+        print("X/6 - Sorry, try again tomorrow! ")
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
