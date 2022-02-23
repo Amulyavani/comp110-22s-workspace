@@ -2,8 +2,6 @@
 
 __author__ = "730407531"
 
-from turtle import Turtle
-from xmlrpc.client import boolean
 
 def contains_char(word: str, char: str) -> bool:
     """Given a guessed word, returns a correct character contained."""
@@ -14,7 +12,8 @@ def contains_char(word: str, char: str) -> bool:
             return True
         i = i + 1
     return False
-    
+
+
 def emojified(guess: str, secret: str) -> str:
     """Given a guess and a secret word, return a string of emojis whose color codifies the same as EX02."""
     assert len(guess) == len(secret)
@@ -37,12 +36,13 @@ def emojified(guess: str, secret: str) -> str:
                     wrong_spot = True
                 else:
                     counter = counter + 1
-                    wrong_spot = False    
-            if wrong_spot == False:
+                    wrong_spot = False   
+            if wrong_spot is False:
                 emoji_result = emoji_result + WHITE_BOX
         counter = 0
         i = i + 1
     return emoji_result
+
 
 def input_guess(exp_len: int) -> str:
     """Given an integer "expected length" of a guess, will prompt user for a guess until they guess a word of the appropriate length."""
@@ -55,6 +55,7 @@ def input_guess(exp_len: int) -> str:
     if len(wordle_guess) == exp_len:
         return wordle_guess
     return wordle_guess
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -74,10 +75,7 @@ def main() -> None:
             turns = turns + 1
     if win_game is False:
         print("X/6 - Sorry, try again tomorrow! ")
+
+
 if __name__ == "__main__":
     main()
-
-
-
-
-
