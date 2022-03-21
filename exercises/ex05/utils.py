@@ -1,4 +1,4 @@
-"""Exercise 05 'list' Utility Functions"""
+"""Exercise 05 'list' Utility Functions."""
 
 __author__ = "730407531"
 
@@ -32,8 +32,9 @@ def sub(a_list: list[int], start: int, end: int) -> list[int]:
     i = start
     while i < end:
         returned_list.append(a_list[i])
-        i+= 1
+        i += 1
     return returned_list
+
 
 def concat(first_list: list[int], second_list: list[int]) -> list[int]:
     """Given two Lists of ints, concat should generate a new List which contains all of the elements of the first list followed by all of the elements of the second list."""
