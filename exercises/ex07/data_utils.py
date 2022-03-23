@@ -6,6 +6,7 @@ from csv import DictReader
 
 # Define your functions below
 
+
 def read_csv_rows(path: str) -> list[dict[str, str]]:
     """Read an entire CSV of data into a `list` of rows, each row represented as `dict[str, str]."""
     result: list[dict[str, str]] = []
@@ -75,7 +76,7 @@ def concat(table_one: dict[str, list[str]], table_two: dict[str, list[str]]) -> 
     for column in table_one:
         result[column] = table_one[column]
     for column in table_two:
-        if table_two[column] == result[column]:
+        if column in result[column]:
             result[column] += table_two[column]
         else:
             result[column] = table_two[column]
